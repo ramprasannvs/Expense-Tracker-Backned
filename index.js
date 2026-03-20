@@ -4,7 +4,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 require("dotenv").config();
-require("./Models/db");
+
+const connectDB = require("./Models/db");
+connectDB();
 
 const AuthRouter = require("./Routes/AuthRouter");
 const ExpenseRouter = require("./Routes/ExpenseRouter");
